@@ -44,6 +44,8 @@ def generate_single_bed(bam_file, reference, output_dir, confidence_threshold=0.
             str(bed_file),
             '--ref', str(reference),
             '--cpg',
+            '--modified-bases', '5mC',
+            '--mod-thresholds', 'm:' + str(confidence_threshold),
             '--filter-threshold', str(confidence_threshold)
         ]
 

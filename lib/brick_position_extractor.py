@@ -111,9 +111,9 @@ def load_bed_methylation(bed_file):
                 # Column 10 contains space-separated values
                 # Format: "coverage methylation_pct ..."
                 # We want the 2nd value (index 1)
-                column10_values = fields[9].split()
+                column10_values = fields[10].split()
                 if len(column10_values) >= 2:
-                    pct_meth = float(column10_values[1])
+                    pct_meth = float(fields[10])
                     meth_data[pos] = pct_meth
 
     return meth_data

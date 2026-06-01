@@ -149,7 +149,7 @@ class DynamicThresholdDetector:
                 fields = line.strip().split('\t')
                 if len(fields) >= 10 and fields[3] == 'm':
                     pos = int(fields[1])
-                    pct_meth = float(fields[9].split()[1])
+                    pct_meth = float(fields[10])
                     meth_data[pos] = pct_meth
         return meth_data
 
